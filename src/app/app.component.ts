@@ -12,7 +12,7 @@ export class AppComponent {
   AC: string;
   AT: string;
   media: number;
-  FinalMedia: number;
+  FinalMedia: number; 
 
   constructor(
     public toastController: ToastController,
