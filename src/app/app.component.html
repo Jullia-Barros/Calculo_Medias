@@ -1,23 +1,39 @@
 <ion-app>
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <br />
-    <ion-title> Médias </ion-title>
-    <br />
-  </ion-toolbar>
-</ion-header>
+  <ion-content>
+    <ion-item>
+      <ion-label position="floating">Primeiro número</ion-label>
+      <ion-input [(ngModel)]="num1"></ion-input>
+    </ion-item>
 
-<br />
+    <ion-item>
+      <ion-label position="floating">Segundo número</ion-label>
+      <ion-input [(ngModel)]="num2"></ion-input>
+    </ion-item>
 
-<ion-content id="content" [fullscreen]="true" color="minhacor">
-  <h1>Veja suas Notas</h1>
-  <ion-button
-    class="butao"
-    exepand="block"
-    fill="outline"
-    (click)="verNotas()"
-  >
-    NOTAS
-  </ion-button>
-</ion-content>
+    <ion-button color="dark" (click)="somar()">
+      <br />
+      <ion-icon name="add-outline"></ion-icon>
+      Somar
+    </ion-button>
+
+    <ion-button color="dark" (click)="subtrair()">
+      <br />
+      <ion-icon name="remove-outline"></ion-icon>
+      Subtrair
+    </ion-button>
+
+    <ion-button color="dark" (click)="multiplicar()">
+      <br />
+      <ion-icon name="close-outline"></ion-icon>
+      Multiplicar
+    </ion-button>
+
+    <ion-button color="dark" (click)="dividir()">
+      <br />
+      <ion-icon name="pause-outline"></ion-icon>
+      Dividir
+    </ion-button>
+    <br /><br />
+    <ion-label>{{ resultado }}</ion-label>
+  </ion-content>
 </ion-app>
